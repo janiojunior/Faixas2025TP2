@@ -30,6 +30,12 @@ public class EstadoResource {
     }
 
     @GET
+    @Path("/{id}")
+    public Estado buscarPorId(Long id) {
+        return service.findById(id);
+    }
+
+    @GET
     @Path("/sigla/{sigla}")
     public Estado buscarPorSigla(String sigla) { 
         return service.findBySigla(sigla);
