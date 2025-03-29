@@ -7,6 +7,7 @@ import br.unitins.tp2.model.Estado;
 import br.unitins.tp2.service.EstadoService;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.DefaultValue;
@@ -52,7 +53,7 @@ public class EstadoResource {
     }
 
     @POST
-    public Estado incluir(EstadoDTO dto) {
+    public Estado incluir(@Valid EstadoDTO dto) {
         return service.create(dto);
     }
 

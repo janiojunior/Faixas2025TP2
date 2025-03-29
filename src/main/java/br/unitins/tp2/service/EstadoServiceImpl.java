@@ -6,7 +6,6 @@ import br.unitins.tp2.dto.EstadoDTO;
 import br.unitins.tp2.model.Estado;
 import br.unitins.tp2.model.Regiao;
 import br.unitins.tp2.repository.EstadoRepository;
-import io.quarkus.hibernate.orm.panache.Panache;
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -24,7 +23,7 @@ public class EstadoServiceImpl implements EstadoService {
         Estado novoEstado = new Estado();
         novoEstado.setNome(estado.getNome());
         novoEstado.setSigla(estado.getSigla());
-       
+
         // selecionar uma regiao
         novoEstado.setRegiao(Regiao.CENTRO_OESTE);
 
@@ -64,7 +63,7 @@ public class EstadoServiceImpl implements EstadoService {
         PanacheQuery<Estado> query = null;
         if (page == null || pageSize == null)
             query = estadoRepository.findAll();
-        else 
+        else
             query = estadoRepository.findAll().page(page, pageSize);
 
         return query.list();
@@ -88,5 +87,5 @@ public class EstadoServiceImpl implements EstadoService {
     public long count(String nome) {
         return estadoRepository.findByNome(nome).count();
     }
-    
+
 }
