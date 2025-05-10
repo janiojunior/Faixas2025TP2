@@ -17,3 +17,6 @@ insert into faixa (nome, descricao, preco, estoque, modalidade, nomeImagem) valu
 insert into faixa (nome, descricao, preco, estoque, modalidade, nomeImagem) values( 'Faixa Azul', 'Descricao Faixa Azul', 80.0, 10, 1, 'faixa_azul_jiu.png');
 insert into faixa (nome, descricao, preco, estoque, modalidade, nomeImagem) values( 'Faixa Roxa', 'Descricao Faixa Roxa', 85.0, 10, 1, 'faixa_roxa_jiu.png');
 insert into faixa (nome, descricao, preco, estoque, modalidade, nomeImagem) values( 'Faixa Marrom', 'Descricao Faixa Marrom', 90.0, 10, 1, 'faixa_marrom_jiu.png');
+
+
+insert into usuario(username, senha, perfil) values ('janio', '0cctg7WgpEz7kC/AzVC+KX+bZLPXDtgJDqWWZWnmzHH+7Na2YVxYYSFPxcf7ImAjqfNckx0aT4n5qKM7WEoeEQ==', 1);
