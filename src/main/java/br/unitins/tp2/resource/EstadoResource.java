@@ -30,7 +30,7 @@ public class EstadoResource {
     EstadoService service;
 
     @GET
-    @RolesAllowed("Adm")
+    // @RolesAllowed("Adm")
     public List<Estado> buscarTodos(@QueryParam("page") @DefaultValue("0") int page,
                                     @QueryParam("page_size") @DefaultValue("100") int pageSize) { 
         return service.findAll(page, pageSize);
