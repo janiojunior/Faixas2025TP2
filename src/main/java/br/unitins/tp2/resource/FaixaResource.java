@@ -12,6 +12,7 @@ import br.unitins.tp2.form.FaixaImageForm;
 import br.unitins.tp2.model.Modalidade;
 import br.unitins.tp2.service.FaixaService;
 import br.unitins.tp2.service.FileService;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.ws.rs.Consumes;
@@ -44,6 +45,7 @@ public class FaixaResource {
     private static final Logger LOG = Logger.getLogger(FaixaResource.class);
 
     @GET
+    @RolesAllowed("blah")
     public List<FaixaResponseDTO> getAll(
             @QueryParam("page") @DefaultValue("0") int page,
             @QueryParam("pageSize") @DefaultValue("10") int pageSize) {

@@ -5,7 +5,6 @@ import java.util.List;
 import br.unitins.tp2.dto.EstadoDTO;
 import br.unitins.tp2.model.Estado;
 import br.unitins.tp2.service.EstadoService;
-import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -30,7 +29,6 @@ public class EstadoResource {
     EstadoService service;
 
     @GET
-    // @RolesAllowed("Adm")
     public List<Estado> buscarTodos(@QueryParam("page") @DefaultValue("0") int page,
                                     @QueryParam("page_size") @DefaultValue("100") int pageSize) { 
         return service.findAll(page, pageSize);

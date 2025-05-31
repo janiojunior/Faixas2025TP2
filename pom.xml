@@ -90,6 +90,12 @@
           <groupId>org.jboss.resteasy</groupId>
           <artifactId>resteasy-multipart-provider</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-mailer</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
